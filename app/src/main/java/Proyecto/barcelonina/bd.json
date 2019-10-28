@@ -1,9 +1,9 @@
 {
   "tours": [
     {
-      "tourName": "Gaudi",
+      "tourName": "Barcelona in two hours",
       "tourImage": "https://raw.githubusercontent.com/Albertvedu/Barcelonina/master/app/src/main/java/Proyecto/barcelonina/img/t1.jpg",
-      "tourDescription": "Gaudi en barcelona"
+      "tourDescription": "Do you have little time in Barcelona? Do you have a very tight schedule but you wish to visit at least one higlight? If this is your case, here you have the perfect Barcelona Private Tour."
     },
     {
       "tourName": "Gaudi 34",
