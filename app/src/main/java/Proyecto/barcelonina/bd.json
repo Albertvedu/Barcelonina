@@ -4,6 +4,11 @@
       "tourName": "Gaudi",
       "tourImage": "https://raw.githubusercontent.com/Albertvedu/Barcelonina/master/app/src/main/java/Proyecto/barcelonina/img/t1.jpg",
       "tourDescription": "Gaudi en barcelona"
+    },
+    {
+      "tourName": "Gaudi 34",
+      "tourImage": "https://raw.githubusercontent.com/Albertvedu/Barcelonina/master/app/src/main/java/Proyecto/barcelonina/img/t2.jpg",
+      "tourDescription": "Gaudi en santa coloma"
     }
   ]
 }
