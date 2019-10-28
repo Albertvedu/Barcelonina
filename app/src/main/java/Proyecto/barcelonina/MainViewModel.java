@@ -7,7 +7,8 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import Proyecto.barcelonina.Model.Bbdd_Response;
+import Proyecto.barcelonina.model.BarceloninaResponse;
+import Proyecto.barcelonina.api.BarceloninaApiModule;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -17,29 +18,20 @@ public class MainViewModel extends AndroidViewModel {
         super(application);
     }
 
-    public LiveData<Bbdd_Response> buscar(String term){
-        final MutableLiveData<Bbdd_Response> bbdd_Response = new MutableLiveData<>();
+    public LiveData<BarceloninaResponse> obtenerTours(){
+        final MutableLiveData<BarceloninaResponse> apiResponse = new MutableLiveData<>();
 
-        BarceloninaApiModule.barceloninaApi.buscar(term).enqueue(new Callback<Bbdd_Response>() {
+        BarceloninaApiModule.barceloninaApi.obtenerTours().enqueue(new Callback<BarceloninaResponse>() {
             @Override
-            public void onResponse(Call<Bbdd_Response> call, Response<Bbdd_Response> response) {
-
+            public void onResponse(Call<BarceloninaResponse> call, Response<BarceloninaResponse> response) {
+                apiResponse.postValue(response.body());
             }
 
             @Override
-            public void onFailure(Call<Bbdd_Response> call, Throwable t) {
-
+            public void onFailure(Call<BarceloninaResponse> call, Throwable t) {
             }
-
-            @Override
-            public void onResponse(Call<ItunesResponse> call, Response<ItunesResponse> response) {
-                itunesResponse.setValue(response.body());
-            }
-
-            @Override
-            public void onFailure(Call<ItunesResponse> call, Throwable t) {}
         });
 
-        return itunesResponse;
+        return apiResponse;
     }
 }
