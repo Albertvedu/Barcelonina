@@ -2,7 +2,7 @@
   "tours": [
     {
       "tourName": "Gaudi",
-      "tourImage": "https://github.com/Albertvedu/Barcelonina_BBDD/raw/master/img/t1.jpg",
+      "tourImage": "https://raw.githubusercontent.com/Albertvedu/Barcelonina/master/app/src/main/java/Proyecto/barcelonina/img/t1.jpg",
       "tourDescription": "Gaudi en barcelona"
     }
   ]
