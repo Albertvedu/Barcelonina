@@ -6,8 +6,13 @@
       "tourDescription": "Do you have little time in Barcelona? Do you have a very tight schedule but you wish to visit at least one higlight? If this is your case, here you have the perfect Barcelona Private Tour."
     },
     {
-      "tourName": "Gaudi 34",
+      "tourName": "Barcelona in three hours",
       "tourImage": "https://raw.githubusercontent.com/Albertvedu/Barcelonina/master/app/src/main/java/Proyecto/barcelonina/img/t2.jpg",
+      "tourDescription": "Gaudi en santa coloma"
+    },
+    {
+      "tourName": "Barcelona in four hours",
+      "tourImage": "https://raw.githubusercontent.com/Albertvedu/Barcelonina/master/app/src/main/java/Proyecto/barcelonina/img/t3.jpg",
       "tourDescription": "Gaudi en santa coloma"
     }
   ]
