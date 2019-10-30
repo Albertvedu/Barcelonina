@@ -7,8 +7,10 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import Proyecto.barcelonina.api.BarceloninaApi;
 import Proyecto.barcelonina.model.BarceloninaResponse;
 import Proyecto.barcelonina.api.BarceloninaApiModule;
+import Proyecto.barcelonina.model.TourDetail;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -33,5 +35,22 @@ public class MainViewModel extends AndroidViewModel {
         });
 
         return apiResponse;
+    }
+
+    public LiveData<TourDetail> obtenerTour(String id){
+        final MutableLiveData<TourDetail> tourDetailMutableLiveData = new MutableLiveData<>();
+
+        BarceloninaApiModule.barceloninaApi.obtenerTour(id).enqueue(new Callback<TourDetail>() {
+            @Override
+            public void onResponse(Call<TourDetail> call, Response<TourDetail> response) {
+                tourDetailMutableLiveData.postValue(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<TourDetail> call, Throwable t) {
+            }
+        });
+
+        return tourDetailMutableLiveData;
     }
 }

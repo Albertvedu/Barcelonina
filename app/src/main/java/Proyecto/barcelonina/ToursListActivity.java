@@ -86,7 +86,7 @@ public class ToursListActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(ToursListActivity.this, DetailActivity.class);
-                    intent.putExtra("ITEM_POSITION", position);
+                    intent.putExtra("TOUR_ID", tour.tourId);
                     startActivity(intent);
                 }
             });
@@ -98,6 +98,5 @@ public class ToursListActivity extends AppCompatActivity {
         }
     }
 }
-
 
 
