@@ -5,7 +5,8 @@
     android:id="@+id/fotoPortada"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/portada"
+    android:background="@drawable/images22"
+
     android:alpha="1">
 
 

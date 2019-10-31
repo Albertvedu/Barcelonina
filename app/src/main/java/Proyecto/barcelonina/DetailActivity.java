@@ -18,6 +18,7 @@ import static android.media.CamcorderProfile.get;
 
 public class DetailActivity extends AppCompatActivity {
 
+    TextView textViewNombre;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
